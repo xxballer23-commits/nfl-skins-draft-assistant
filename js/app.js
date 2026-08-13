@@ -96,8 +96,13 @@ function banner() {
     // than colouring the whole board as fake or waving it through as market.
     const src = market.winTotalSource ?? {};
     const method = market.pointsForMethod ?? {};
+    // A line dated weeks ago may still be the current one, so say when it was
+    // last checked against the book rather than letting asOf imply staleness.
+    const checked = src.reverifiedOn
+      ? `, unchanged when re-checked against the book on ${src.reverifiedOn}`
+      : '';
     messages.push(
-      `Win totals are real market lines (${src.book} as of ${src.asOf}, sum ${src.sum}). `
+      `Win totals are real market lines (${src.book} as of ${src.asOf}${checked}, sum ${src.sum}). `
       + `POINTS TOTALS ARE DERIVED, NOT MARKET: no public board lists season points for all 32 `
       + `teams, so each team's net strength comes from its win total and the split between `
       + `scoring and preventing is last season's scoring style regressed by lam=${method.lam}. `

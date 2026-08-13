@@ -207,6 +207,10 @@ def main():
             "book": market.get("book"),
             "asOf": market.get("asOf"),
             "via": market.get("via"),
+            # When the board was last checked against the book itself. A line can
+            # be weeks old and still be current, so asOf alone reads as stale.
+            "reverifiedOn": market.get("reverifiedOn"),
+            "reverifiedAgainst": market.get("reverifiedAgainst"),
             "sum": round(total, 4),
         },
         "pointsForMethod": {

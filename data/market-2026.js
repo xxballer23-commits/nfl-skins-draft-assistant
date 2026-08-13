@@ -3,7 +3,7 @@
 // Edit data/win-totals-2026.json and re-run rather than hand-editing this file.
 
 export default {
- "built": "2026-08-13T02:26:16+00:00",
+ "built": "2026-08-13T03:21:36+00:00",
  "note": "winTotal is a real market line: DraftKings as of 2026-07-23, hand-entered in win-totals-2026.json and checked to sum to 272. pointsFor is NOT a market line. No public board lists season points totals for all 32 teams, so it is derived: the market win total sets each team's net strength, and last season's scoring style (off+def) regressed by lam=0.5 decides how that strength splits between scoring and preventing. Replace pointsFor and set source to \"vegas\" if you find real season points props.",
  "pointsForMethod": {
   "derived": true,
@@ -12,7 +12,7 @@ export default {
   "leagueMeanPoints": 23.0129,
   "marginSd": 11.8,
   "maxWinError": 0.0,
-  "prior": "/Users/cummiskeykid/Desktop/nfl-skins-tracker/data/2025-games.json"
+  "prior": "../nfl-skins-tracker/data/2025-games.json"
  },
  "season": 2026,
  "source": "vegas-wins+regressed-style",
@@ -149,6 +149,8 @@ export default {
  "winTotalSource": {
   "asOf": "2026-07-23",
   "book": "DraftKings",
+  "reverifiedAgainst": "The live DraftKings app, all 32 teams read off screen. Every number matched this file and the sum was still 272.0, so the board had not moved since asOf. A betfanatics.com page dated the same day claimed Cardinals, Falcons and Saints had moved up and Bengals and Patriots down; all five were contradicted by the live app and were not used. Odds numbers read off a web page are not a substitute for the book's own app.",
+  "reverifiedOn": "2026-08-12",
   "sum": 272.0,
   "via": "FOX Sports, '2026 NFL Win Totals: Over/Unders For All 32 Squads'"
  }
