@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skins Draft Assistant</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>Skins Draft Assistant</h1>
+  <p class="sub">6 teams &middot; 5 rounds &middot; snake &middot; 64 assets, 30 come off the board</p>
+</header>
+
+<div id="banner" class="banner" hidden></div>
+
+<nav class="tabs" id="tabs">
+  <button data-view="board" class="active">Draft Board</button>
+  <button data-view="rankings">Rankings</button>
+  <button data-view="asset">Per-Week</button>
+  <button data-view="model">Model</button>
+</nav>
+
+<main>
+  <section id="view-board" class="view"></section>
+  <section id="view-rankings" class="view" hidden></section>
+  <section id="view-asset" class="view" hidden></section>
+  <section id="view-model" class="view" hidden></section>
+</main>
+
+<footer>
+  <span id="status">loading&hellip;</span>
+</footer>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
